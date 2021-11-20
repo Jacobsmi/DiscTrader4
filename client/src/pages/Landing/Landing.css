@@ -189,13 +189,13 @@
   }
 
   .Landing-Header-Button {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 700;
-    width: 100px;
+    width: 5%;
     background-color: white;
     border: 1px solid #cdcdcd;
     border-radius: 10px;
-    padding: 8px;
+    padding: 0.5vw;
     text-align: center;
     text-decoration: none;
     color: black;
@@ -204,13 +204,13 @@
 
   .Landing-Header-SignIn {
     display: block;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 700;
-    width: 100px;
+    width: 5%;
     background-color: white;
     border: 1px solid #cdcdcd;
     border-radius: 10px;
-    padding: 8px;
+    padding: 0.5vw;
     text-align: center;
     text-decoration: none;
     color: black;
