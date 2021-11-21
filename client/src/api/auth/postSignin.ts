@@ -5,9 +5,9 @@ const postSignin = async () =>{
   const resJSON = await res.json();
 
   if (resJSON.status === "success"){
-    return resJSON.id;
+    return true;
   }else{
-    return -1;
+    return false;
   }
 }
 

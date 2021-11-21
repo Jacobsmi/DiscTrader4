@@ -16,7 +16,7 @@ app.get("/", (req: Request, res: Response)=>{
 })
 
 app.post("/signin", (req: Request, res: Response)=>{
-  res.send({status: "success", id: 1});
+  res.send({status: "failure"});
 })
 
 app.listen(5000, ()=>{console.log("Server is listening at http://localhost:5000")})

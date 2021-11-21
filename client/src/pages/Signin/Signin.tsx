@@ -11,10 +11,10 @@ const Signin = () => {
     // Everytime a sign in is attempted reset the errors field
     setSigninErrors('');
     // call the Post function which makes the API call and processes the result
-    const id = await postSignin();
+    const result = await postSignin();
     // Display based off of the error recieved
-    if (id === -1){
-      setSigninErrors('Some error occurred while processing signin.');
+    if (result === false){
+      setSigninErrors('Some error occurred while processing sign in. Please try again later');
     }
   }
 
@@ -26,9 +26,6 @@ const Signin = () => {
       <div className="Signin-Form-Container">
         <div className="Signin-Form">
           <div className="Signin-Form-Header">Sign In</div>
-          <div className="Signin-Form-Errors" style={signinErrors? {display: "block"}: {display: "none"}}>
-            {signinErrors}
-          </div>
           <input
             className="Signin-Form-Input"
             placeholder="E-Mail"
@@ -39,6 +36,9 @@ const Signin = () => {
             placeholder="Password"
             type="password"
           ></input>
+          <div className="Signin-Form-Errors" style={signinErrors? {display: "block"}: {display: "none"}}>
+            {signinErrors}
+          </div>
         </div>
       </div>
       <div className="Signin-Button-Container">

@@ -22,7 +22,8 @@
 
 .Signin-Form{
   width: 80%;
-  height: 80%;
+  height: auto;
+  min-height: 60%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -33,11 +34,21 @@
 .Signin-Form-Header{
   margin-top: 2vh;
   font-size: 10vw;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
   font-weight: 600;
 }
 
+.Signin-Form-Errors{
+  width: 70%;
+  background-color: rgb(240, 147, 147);
+  margin-bottom: 5vh;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .Signin-Form-Input{
+  box-sizing: border-box;
+  width: 80%;
   font-size: 5vw;
   margin-bottom: 5vh;
   padding: 5px;

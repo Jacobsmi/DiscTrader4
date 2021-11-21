@@ -16,6 +16,6 @@ app.get("/", function (req, res) {
     res.send({ "status": "success" }).status(200);
 });
 app.post("/signin", function (req, res) {
-    res.send({ status: "success", id: 1 });
+    res.send({ status: "failure" });
 });
 app.listen(5000, function () { console.log("Server is listening at http://localhost:5000"); });
