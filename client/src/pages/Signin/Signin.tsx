@@ -1,12 +1,21 @@
 import "./Signin.css";
 import disc from "../../imgs/FlyingDisc.svg";
 import { Link } from "react-router-dom";
+import postSignin from "../../api/auth/postSignin";
+import { useState } from "react";
 
 const Signin = () => {
+  const [signinErrors, setSigninErrors] = useState<string>('');
 
-  const processSignin = () => {
-    console.log("Processing Sign in");
-    // Needs the database
+  const processSignin = async () => {
+    // Everytime a sign in is attempted reset the errors field
+    setSigninErrors('');
+    // call the Post function which makes the API call and processes the result
+    const id = await postSignin();
+    // Display based off of the error recieved
+    if (id === -1){
+      setSigninErrors('Some error occurred while processing signin.');
+    }
   }
 
   return (
@@ -17,6 +26,9 @@ const Signin = () => {
       <div className="Signin-Form-Container">
         <div className="Signin-Form">
           <div className="Signin-Form-Header">Sign In</div>
+          <div className="Signin-Form-Errors" style={signinErrors? {display: "block"}: {display: "none"}}>
+            {signinErrors}
+          </div>
           <input
             className="Signin-Form-Input"
             placeholder="E-Mail"
