@@ -1,0 +1,70 @@
+.Signin{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 20% 50% 30%;
+  grid-template-columns: 100%;
+  grid-template-areas: "img" "form" "button";
+}
+
+.Signin-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Signin-Form-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Signin-Form{
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.Signin-Form-Header{
+  margin-top: 2vh;
+  font-size: 10vw;
+  margin-bottom: 10vh;
+  font-weight: 600;
+}
+
+.Signin-Form-Input{
+  font-size: 5vw;
+  margin-bottom: 5vh;
+  padding: 5px;
+}
+
+.Signin-Button-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 4vw;
+}
+.Signin-Button{
+  height: 20%;
+  width: 50%;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 4vw;
+  font-weight: 700;
+  margin-bottom: 5vh;
+}
+
+.Signin-Link{
+  display: inline;
+  text-decoration: underline;
+  font-size: 4vw;
+  color: white;
+}
